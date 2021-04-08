@@ -1,0 +1,11 @@
+<!DOCTYPE RCC><RCC version="1.0">
+  <qresource>
+    <file>icon/icon_color.png</file>
+    <file>icon/icon_credits.png</file>
+    <file>icon/icon_gallery.png</file>
+    <file>icon/icon_menu.png</file>
+    <file>icon/icon_snapshot.png</file>
+    <file>icon/icon_window.png</file>
+
+  </qresource>
+</RCC>
