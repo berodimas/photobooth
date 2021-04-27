@@ -22,7 +22,9 @@ class MainWindow(QWidget):
         self.setWindowTitle('PyQt5 - Photo Booth App')
         self.ui = Ui_Form()
         self.ui.setupUi(self)
-        self.cap = cv2.VideoCapture(1)
+        # self.cap = cv2.VideoCapture(0)
+        self.cap = cv2.VideoCapture("udpsrc port=5000 ! application/x-rtp,payload=96,encoding-name=H264 ! rtpjitterbuffer mode=1 ! rtph264depay ! h264parse ! decodebin ! videoconvert ! appsink", cv2.CAP_GSTREAMER)
+        # self.cap = cv2.VideoCapture('mfvideosrc device-index=1 ! video/x-raw, width=640, height=480, pixel-aspect-ratio=1/1, framerate=30/1 ! videoconvert ! appsink')
         # start timer
         timer = QTimer(self)
         timer.setInterval(int(1000/30))

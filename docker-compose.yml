@@ -1,0 +1,10 @@
+version: "3.8"
+
+services:
+    photobooth:
+        container_name: photobooth-app
+        image: berodimas/photobooth-app:1.0 
+        environment: 
+            - DISPLAY=172.30.112.1:0.0
+        ports:
+            - 5000:5000/udp
